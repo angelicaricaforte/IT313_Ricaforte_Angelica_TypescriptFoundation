@@ -1,0 +1,15 @@
+// Compute average of 3 grades
+export function computeAverage(prelim: number, midterm: number, final: number): number {
+  return (prelim + midterm + final) / 3;
+}
+
+// Enrollment Status Enum
+export enum EnrollmentStatus {
+  Passing,
+  Probation
+}
+
+// Get status based on average
+export default function getStatus(average: number): EnrollmentStatus {
+  return average >= 75 ? EnrollmentStatus.Passing : EnrollmentStatus.Probation;
+}
